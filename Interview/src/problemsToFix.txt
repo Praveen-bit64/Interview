@@ -1,0 +1,19 @@
+On this ProductPage.jsx component has couple of issues:
+
+1. on line 105 img tag inside product-image container has not alt artibute - it neccessary for a img tag if the image is unable to load the alt artribute will show the alternate text incase of error fetching image. 
+
+2. On line 110 div has self closed, Basically div tag not able to self close, we need to wrap the content inside div opening and closing tag.
+
+3. On line 130 the reviews array mapped, in react it neccessary to pass key for each item while mapping, without key react unable to target the element to update and delete, during compelation it through warning.
+
+4. function handleVariantChange has fetch stock from the url, the function wants variant param to get, so that we need to pass the variant while calling the function onSelect={()=>handleVariantChange(variant)}
+
+5. on addToCart function uses try, catch method, it tries to add the product to the cart, but if there is any problem it not catches the error, it neccessary to catch the error.
+
+6. function totalPrice uses useMemo hook to check if the value changes only it re-renders the component, but it has no dependency, it need to set when the cart value change check the value.
+
+7. initially the isLoading is true, during isLoading it return the div loading message, but the setIsLoading is never used to make it false, on function fetchProduct it better use setIsLoading false after the product is fetched.
+
+8. setError, setLocalVariants functions are defined but never used it through warning during compailing
+
+this are the major errors and things to fix based on my knowledge
