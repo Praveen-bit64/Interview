@@ -31,12 +31,25 @@
     color: aliceblue;
     border-bottom: 1px solid #555;
 }
+.Settings--area:hover,
+.Settings--area.active{
+    color: aliceblue;
+    border-bottom: 1px solid #555;
+}
+.profile--area:hover .profile-area,
+.profile--area.active .profile-area{
+    display: block;
+}
 .profile--area:hover  .profile-content-area,
 .profile--area.active .profile-content-area{
     color: black;
 }
-
-.profile-content{
+.profile--area .profile-area,
+.Settings--area .Settings-area{
+    display: none;
+}
+.profile-content,
+.Setting-content{
     position: absolute;
     left: -10px;
     top: 50px;
@@ -48,4 +61,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.Settings--area{
+    position: relative;
 }
