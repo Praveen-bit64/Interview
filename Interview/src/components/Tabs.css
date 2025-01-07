@@ -1,0 +1,51 @@
+.tabs{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    background-color: #18b6ff;
+}
+.tabs .tab-area{
+    width: 40%;
+    float: right;
+    padding: 20px;
+}
+.tab-area ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.tab-area ul li{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+.tab-area ul .profile--area{
+    position: relative;
+}
+.profile--area:hover,
+.profile--area.active{
+    color: aliceblue;
+    border-bottom: 1px solid #555;
+}
+.profile--area:hover  .profile-content-area,
+.profile--area.active .profile-content-area{
+    color: black;
+}
+
+.profile-content{
+    position: absolute;
+    left: -10px;
+    top: 50px;
+    width: 180px;
+    padding: 20px;
+    background-color: #b5f0ff;
+}
+.profile-content .profile-content-area{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
